@@ -1,5 +1,9 @@
 #Beschreibung
 Dieses Skript liest den aktuellen Akkustand aus und gibt bei unterschreiten eines definierten Wertes eine Warnung aus.
+#Abhängigkeiten
+* upower oder acpid
+* systemd
+* einen Notification Deamon
 #Aufbau:
 ##/usr/src/batterymon/
 
