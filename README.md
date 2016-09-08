@@ -13,19 +13,18 @@ Dieses Skript liest den aktuellen Akkustand aus und gibt bei unterschreiten eine
 
 * **Standardwerte:**
 
-* *  Filter=BAT (sucht in der Ausgabe von upower -e nach dem gegebenen String, Logitech Performance MX wird mit mouse gefunden)
-* * Critical=10
-* * Warning=20
+	*  Filter=BAT (sucht in der Ausgabe von upower -e nach dem gegebenen String, Logitech Performance MX wird mit mouse gefunden)
+	* Critical=10
+	* Warning=20
 	
 * **Zurzeit implementiert Methoden:**
-
-* - [X] upower
+	 - [X] upower
 	
 * **Geplante Methoden:**
 
-* - [ ] acpi
+	 - [ ] acpi
 
-* - [ ] /sys/class/
+	 - [ ] /sys/class/
 	
 * **In der monitor.sh können noch weitere Eistellungen getätigt werden:**
 ```
