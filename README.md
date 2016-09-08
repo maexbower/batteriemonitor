@@ -4,7 +4,9 @@ Dieses Skript liest den aktuellen Akkustand aus und gibt bei unterschreiten eine
 * upower oder acpid
 * systemd
 * einen Notification Deamon
+
 #Aufbau:
+
 ##/usr/src/batterymon/
 
 1 script.sh
