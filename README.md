@@ -1,33 +1,33 @@
 #Beschreibung
 Dieses Skript liest den aktuellen Akkustand aus und gibt bei unterschreiten eines definierten Wertes eine Warnung aus.
 #Aufbau:
-/usr/src/batterymon/
-- script.sh
+##/usr/src/batterymon/
 
-	wird vom Systemd Service aufgerufen und führt das eigendliche Skript mit dem gewünschten Parametern auf
+1 script.sh
 
-- monitor.sh
-**Syntax:** `monitor.sh [Filter][Critical][Warning]`
+* wird vom Systemd Service aufgerufen und führt das eigendliche Skript mit dem gewünschten Parametern auf
 
-**Standardwerte:**
+2 monitor.sh
 
-Filter=BAT (sucht in der Ausgabe von upower -e nach dem gegebenen String, Logitech Performance MX wird mit mouse gefunden)
+* **Syntax:** `monitor.sh [Filter][Critical][Warning]`
 
-Critical=10
+* **Standardwerte:**
 
-Warning=20
+* *  Filter=BAT (sucht in der Ausgabe von upower -e nach dem gegebenen String, Logitech Performance MX wird mit mouse gefunden)
+* * Critical=10
+* * Warning=20
 	
-**Zurzeit implementiert Methoden:**
+* **Zurzeit implementiert Methoden:**
 
-- [X] upower
+* - [X] upower
 	
-**Geplante Methoden:**
+* **Geplante Methoden:**
 
-- [ ] acpi
+* - [ ] acpi
 
-- [ ] /sys/class/
+* - [ ] /sys/class/
 	
-**In der monitor.sh können noch weitere Eistellungen getätigt werden:**
+* **In der monitor.sh können noch weitere Eistellungen getätigt werden:**
 ```
 
 NOTIFYCOMMANDPREFIX="/usr/bin/i3-msg -s /home/max/.config/i3/ipc.sock exec"
@@ -41,16 +41,16 @@ NOTIFYWARNINGKEYWORD="normal"
 NOTIFYCRITICALKEYWORD="critical"
 ```
 	
-/var/lib/systemd/system
+##/var/lib/systemd/system
 
-- batterymon.service
-Servicefile für Sytemd. 
+3 batterymon.service
+* Servicefile für Sytemd. 
 
-Pfad zur script.sh anpassen, wenn es nicht unter /usr/src/batterymon liegt
+* Pfad zur script.sh anpassen, wenn es nicht unter /usr/src/batterymon liegt
 		
-- batterymon.timer
-Timerfile für Systemd
+4 batterymon.timer
+* Timerfile für Systemd
 
-muss ebenfalls mit systemctl aktiviert werden. Definiert das Aufrufintervall, ähnlich wie cron.
+* muss ebenfalls mit systemctl aktiviert werden. Definiert das Aufrufintervall, ähnlich wie cron.
 
 
