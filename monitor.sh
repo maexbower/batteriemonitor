@@ -2,10 +2,10 @@
 ###############################
 #Einstellungen
 ###############################
-#Zeit in Sekunden, die zwischen den Abfragen gewartet werden soll
-TIMETOWAIT=60
-#Wird ein Cron Job verwendet, wird TIMETOWAIT ignoriert
-USECRON=false
+#Zeit in Sekunden, die zwischen den Abfragen gewartet werden soll (nicht implentiert)
+#TIMETOWAIT=60
+#Wird ein Cron Job verwendet, wird TIMETOWAIT ignoriert (nicht implentiert)
+#USECRON=false
 #Welche Technik soll zu Abfrage verwendet werden (UPOWER, ACPI, SYS)
 #UPOWER benutzt das upower Paket als Abstaktionsebene
 #ACPI benutzt das Paket acpi
