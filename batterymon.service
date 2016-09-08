@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs Battery Check
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/src/batterymon/service.sh
+
+[Install]
+WantedBy=batterymon.target
