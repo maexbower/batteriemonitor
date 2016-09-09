@@ -1,5 +1,9 @@
 #Beschreibung
 Dieses Skript liest den aktuellen Akkustand aus und gibt bei unterschreiten eines definierten Wertes eine Warnung aus.
+
+Funktioniert auch mit mehreren eingebauten Akkus. Nervt erst mit Warnungen, wenn alle auf den Filter zutreffenden Akkus mindestens auf 
+Warnung stehen.
+
 #Abhängigkeiten
 * upower oder acpid
 * systemd
